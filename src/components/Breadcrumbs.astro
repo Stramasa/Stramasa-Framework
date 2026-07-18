@@ -1,0 +1,57 @@
+---
+export interface Crumb {
+  label: string;
+  href?: string;
+}
+
+export interface Props {
+  crumbs: Crumb[];
+}
+
+const { crumbs } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbs.map((crumb, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: crumb.label,
+    item: crumb.href ? `https://spiritual.stramasa.com${crumb.href}` : undefined,
+  })),
+};
+---
+
+<!-- Breadcrumb nav is visually hidden but remains in the DOM for SEO crawlers -->
+<nav class="breadcrumbs" aria-label="Breadcrumb" aria-hidden="true">
+  <ol class="breadcrumb-list">
+    {crumbs.map((crumb, index) => (
+      <li class="breadcrumb-item">
+        {crumb.href && index < crumbs.length - 1 ? (
+          <a href={crumb.href} tabindex="-1">{crumb.label}</a>
+        ) : (
+          <span>{crumb.label}</span>
+        )}
+        {index < crumbs.length - 1 && (
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<style>
+  .breadcrumbs {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

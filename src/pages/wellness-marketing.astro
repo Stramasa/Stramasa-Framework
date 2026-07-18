@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GrowthHeader from '../components/GrowthHeader.astro';
+import GrowthFooter from '../components/GrowthFooter.astro';
+import Hero from '../components/Hero.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import CTASection from '../components/CTASection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+
+const services = [
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>',
+    title: 'Wellness SEO Authority',
+    description: 'Build topical authority in yoga, meditation, holistic health, or your specific wellness niche through strategic content and technical SEO.',
+    href: '/wellness-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+    title: 'Retreat & Program Marketing',
+    description: 'Fill your retreats, online programs, and in-person workshops with targeted digital campaigns built for wellness and spiritual audiences.',
+    href: '/wellness-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>',
+    title: 'Yoga Studio Marketing',
+    description: 'Attract new students and retain current members with local SEO, class promotion strategies, and community-building digital marketing.',
+    href: '/wellness-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    title: 'Wellness Coach Branding',
+    description: 'Position yourself as a go-to wellness authority with a distinctive personal brand, authority content, and a lead generation system that works while you work.',
+    href: '/wellness-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    title: 'Online Course & Product Launch',
+    description: 'Launch and scale wellness courses, digital products, and subscription programs with proven launch sequences and evergreen marketing funnels.',
+    href: '/wellness-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+    title: 'Meditation Center Growth',
+    description: 'Grow your meditation center, mindfulness studio, or contemplative practice space with a comprehensive digital marketing approach.',
+    href: '/wellness-marketing/',
+  },
+];
+
+const faqs = [
+  {
+    question: 'What types of wellness businesses does Stramasa work with?',
+    answer: 'We work with a full spectrum of wellness businesses including yoga studios, meditation centers, retreat centers, wellness coaches, holistic health practitioners, naturopaths, spiritual counselors, energy healers, online wellness brands, and wellness product companies. Each engagement is tailored to the specific business model and audience.',
+  },
+  {
+    question: 'How does wellness marketing differ from general digital marketing?',
+    answer: 'Wellness audiences are highly discerning. They research deeply, value proof over claims, and are drawn to authentic stories of transformation. Wellness marketing must lead with genuine value, demonstrate expertise in the specific wellness discipline, and use language that resonates with the wellness worldview — rather than generic business marketing language.',
+  },
+  {
+    question: 'How can I fill my retreats and programs with digital marketing?',
+    answer: 'Filling retreats and programs requires a combination of organic SEO (so people searching for retreats find you), remarketing (reaching people who have visited your site), targeted social advertising, and a strong email list. Stramasa builds all of these systems together into a cohesive funnel that drives registrations consistently.',
+  },
+  {
+    question: 'Is SEO worth it for a wellness business?',
+    answer: 'Absolutely. Search is one of the highest-intent channels for wellness — people searching "yoga studio near me" or "meditation retreat 2025" are actively looking for what you offer. SEO provides compounding returns: the content and authority you build today continues driving traffic for years without ongoing ad spend.',
+  },
+];
+---
+
+<Layout
+  title="Wellness Marketing Agency | Yoga Studio, Retreat & Wellness Business Growth | Stramasa"
+  description="Specialized wellness marketing for yoga studios, retreat centers, meditation businesses, and wellness coaches. Grow your wellness brand with Stramasa's proven Growth Programs."
+  canonical="/wellness-marketing/"
+  category="Wellness Marketing"
+  publishDate="2025-02-15"
+>
+  <SchemaMarkup
+    type="Service"
+    name="Wellness Marketing Services"
+    description="Digital marketing for yoga studios, meditation centers, retreat businesses, and wellness coaches."
+    url="https://spiritual.stramasa.com/wellness-marketing/"
+    serviceType="Wellness Marketing"
+  />
+
+  <GrowthHeader />
+
+  <div class="container">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Spiritual Marketing', href: '/spiritual-marketing/' },
+      { label: 'Wellness Marketing' },
+    ]} />
+  </div>
+
+  <Hero
+    badge="Wellness Business Growth"
+    headline='Grow Your Wellness Brand with <span class="text-gradient">Proven Strategies</span>'
+    subheadline="From yoga studios to retreat centers, wellness coaches to meditation businesses — Stramasa's Growth Programs help wellness brands build digital authority, attract ideal clients, and scale with purpose."
+    ctaLabel="Get Your Wellness Growth Plan"
+    ctaHref="/contact/"
+    ctaSecondaryLabel="View Case Studies"
+    ctaSecondaryHref="/case-studies/"
+  />
+
+  <!-- Intro Section -->
+  <section class="section">
+    <div class="container wellness-intro">
+      <div>
+        <span class="section-label">The Wellness Market Opportunity</span>
+        <h2>The Wellness Industry Is Booming — But Standing Out Is Hard</h2>
+        <p>The global wellness industry exceeds $5 trillion and is growing rapidly. That's an enormous opportunity — but also increasing competition. Wellness businesses that invest in SEO authority, strategic branding, and digital marketing today will be the dominant players in their niches tomorrow.</p>
+        <p style="margin-top:16px;">Stramasa's wellness marketing approach is designed to help you capture that opportunity — with strategies built specifically for how wellness audiences discover, evaluate, and choose the brands they commit to.</p>
+      </div>
+      <div class="wellness-highlights">
+        <div class="highlight">
+          <h3>$5.6T</h3>
+          <p>Global wellness industry size</p>
+        </div>
+        <div class="highlight">
+          <h3>+9.9%</h3>
+          <p>Annual industry growth rate</p>
+        </div>
+        <div class="highlight">
+          <h3>82%</h3>
+          <p>Of wellness clients research online first</p>
+        </div>
+        <div class="highlight">
+          <h3>3-5x</h3>
+          <p>ROI from wellness SEO vs. paid ads</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ServiceSection
+    badge="Wellness Marketing Services"
+    headline="Specialized Marketing for Every Wellness Business"
+    subheadline="Whether you run a local studio or a global online wellness brand, Stramasa has a Growth Program built for your specific model and audience."
+    services={services}
+    columns={3}
+  />
+
+  <FAQSection
+    headline="Wellness Marketing FAQs"
+    faqs={faqs}
+  />
+
+  <CTASection
+    headline="Start Building Your Wellness Brand's Digital Authority"
+    subheadline="Partner with Stramasa and grow your wellness business with a strategy that attracts, converts, and retains your ideal clients."
+  />
+
+  <GrowthFooter />
+</Layout>
+
+<style>
+  .wellness-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .wellness-intro h2 { margin-bottom: 16px; }
+
+  .wellness-intro p {
+    color: var(--charcoal-600);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .wellness-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .highlight {
+    padding: 24px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+
+  .highlight h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 6px;
+  }
+
+  .highlight p {
+    font-size: 0.875rem;
+    color: var(--charcoal-600);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 900px) {
+    .wellness-intro { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>

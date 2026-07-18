@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GrowthHeader from '../components/GrowthHeader.astro';
+import GrowthFooter from '../components/GrowthFooter.astro';
+import Hero from '../components/Hero.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import CTASection from '../components/CTASection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+
+const services = [
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+    title: 'Local SEO for Churches',
+    description: 'Dominate "church near me" searches with optimized Google Business Profiles, local citation building, and location-based content strategies.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    title: 'Congregation Growth',
+    description: 'Attract and retain new members with visitor-focused digital experiences, welcome funnels, and community engagement content strategies.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>',
+    title: 'Sermon & Content Distribution',
+    description: 'Maximize the reach of your sermons, teachings, and church events through YouTube optimization, podcast strategy, and social content distribution.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+    title: 'Giving & Stewardship Campaigns',
+    description: 'Grow online giving with optimized donation pages, stewardship email campaigns, and year-end fundraising strategies built for ministry contexts.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+    title: 'Church Website Optimization',
+    description: 'Transform your church website into a first-visit experience that converts seekers into attenders with clear messaging, fast performance, and strong CTAs.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    title: 'Event & Outreach Promotion',
+    description: 'Fill your services, conferences, and outreach events with targeted digital advertising and event marketing campaigns built for faith communities.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'How can digital marketing help a church grow?',
+    answer: 'Digital marketing helps churches become discoverable to people actively searching for a faith community. Local SEO ensures your church appears in "church near me" searches. Content marketing builds a relationship with seekers before they visit. Social media keeps current members engaged and helps spread your message organically. Together, these create a consistent pipeline of new visitor inquiries.',
+  },
+  {
+    question: 'What makes church marketing different from other organizations?',
+    answer: 'Church marketing must balance growth goals with authenticity and pastoral sensitivity. The tone, messaging, and channels must reflect the values of the faith community. People exploring a church are making a spiritually significant decision, not a purchase — so every touchpoint must feel welcoming, trustworthy, and genuine rather than salesy.',
+  },
+  {
+    question: 'How quickly can a church see results from digital marketing?',
+    answer: 'Local SEO improvements typically show results within 2-4 months. Content authority builds over 6-12 months but creates lasting impact. Paid advertising for events or outreach can generate results immediately. We build strategies that balance quick wins with long-term sustainable growth.',
+  },
+  {
+    question: 'Does Stramasa work with small and mid-size churches?',
+    answer: 'Yes. We work with churches of all sizes, from small community congregations to large multi-campus ministries. Our Growth Programs are scalable — we identify the highest-impact opportunities for your specific situation and budget.',
+  },
+];
+---
+
+<Layout
+  title="Church Marketing Strategy | Grow Your Congregation | Stramasa"
+  description="Specialized church marketing services including local SEO, congregation growth strategies, and digital outreach. Help your church reach more people with Stramasa's proven Growth Programs."
+  canonical="/church-marketing/"
+  category="Church Marketing"
+  publishDate="2025-01-20"
+>
+  <SchemaMarkup
+    type="Service"
+    name="Church Marketing Services"
+    description="Digital marketing strategies for churches and faith-based organizations, including local SEO, congregation growth, and giving campaigns."
+    url="https://spiritual.stramasa.com/church-marketing/"
+    serviceType="Church Marketing"
+  />
+
+  <GrowthHeader />
+
+  <div class="container">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Spiritual Marketing', href: '/spiritual-marketing/' },
+      { label: 'Church Marketing' },
+    ]} />
+  </div>
+
+  <Hero
+    badge="Church Marketing Agency"
+    headline='Grow Your Church with <span class="text-gradient">Digital Authority</span>'
+    subheadline="Help more people find, visit, and stay at your church. Stramasa's church marketing strategies combine local SEO, authentic content, and community-building techniques built for faith organizations."
+    ctaLabel="Get Your Church Growth Plan"
+    ctaHref="/contact/"
+    ctaSecondaryLabel="See Spiritual Marketing"
+    ctaSecondaryHref="/spiritual-marketing/"
+  />
+
+  <!-- Challenge Section -->
+  <section class="section">
+    <div class="container challenge-grid">
+      <div class="challenge-content">
+        <span class="section-label">The Church Growth Challenge</span>
+        <h2>People Are Searching for Your Church — Can They Find You?</h2>
+        <p>Every week, thousands of people in your community search for a church home. They type "church near me," "best church in [city]," or "welcoming church for families." If your church doesn't appear in those results, those potential attenders go somewhere else.</p>
+        <p style="margin-top:16px;">Stramasa's church marketing approach starts with visibility — ensuring your church shows up in every relevant search — and then builds a compelling digital experience that turns searchers into first-time visitors.</p>
+        <a href="/case-studies/faith-nonprofit-growth/" class="btn btn-outline" style="margin-top:24px;">See Church Growth Case Study</a>
+      </div>
+      <div class="challenge-stats">
+        <div class="stat-card">
+          <span class="big-stat">73%</span>
+          <p>of people research a church online before their first visit</p>
+        </div>
+        <div class="stat-card">
+          <span class="big-stat">4x</span>
+          <p>more first-time visitors from optimized local SEO vs. no SEO</p>
+        </div>
+        <div class="stat-card">
+          <span class="big-stat">60%</span>
+          <p>of church seekers decide based on website quality</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ServiceSection
+    badge="Church Marketing Services"
+    headline="Complete Digital Marketing for Churches"
+    subheadline="From local SEO to giving campaigns, every service is built with the pastoral context and audience expectations of faith communities in mind."
+    services={services}
+    columns={3}
+  />
+
+  <FAQSection
+    headline="Church Marketing FAQs"
+    faqs={faqs}
+  />
+
+  <CTASection
+    headline="Help Your Church Reach More People"
+    subheadline="Connect with Stramasa's church marketing team and build a digital presence that brings your community to your doors."
+  />
+
+  <GrowthFooter />
+</Layout>
+
+<style>
+  .challenge-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .challenge-content h2 { margin-bottom: 16px; }
+
+  .challenge-content p {
+    color: var(--charcoal-600);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .challenge-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stat-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .big-stat {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .stat-card p {
+    font-size: 0.9375rem;
+    color: var(--charcoal-700);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .challenge-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>

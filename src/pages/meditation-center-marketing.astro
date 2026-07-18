@@ -1,0 +1,251 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GrowthHeader from '../components/GrowthHeader.astro';
+import GrowthFooter from '../components/GrowthFooter.astro';
+import Hero from '../components/Hero.astro';
+import CTASection from '../components/CTASection.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import FAQSection from '../components/FAQSection.astro';
+
+const strategies = [
+  {
+    title: 'Keyword Research for Spiritual Niches',
+    description: 'Identify the exact search terms your ideal clients and congregation members use — including long-tail spiritual queries, local searches, and AI-driven question formats.',
+    icon: '01',
+  },
+  {
+    title: 'Topical Authority Cluster Building',
+    description: 'Create interconnected content clusters that cover your spiritual niche comprehensively — so search engines and AI recognize you as the authoritative source.',
+    icon: '02',
+  },
+  {
+    title: 'Technical SEO for Spiritual Sites',
+    description: 'Ensure your website meets all technical requirements — core web vitals, schema markup, mobile performance, structured data — for maximum search visibility.',
+    icon: '03',
+  },
+  {
+    title: 'GEO: Generative Engine Optimization',
+    description: 'Optimize your content to appear in AI-generated answers from Google SGE, Perplexity, and ChatGPT — the next frontier of spiritual brand discovery.',
+    icon: '04',
+  },
+  {
+    title: 'Local SEO for Spiritual Businesses',
+    description: 'Dominate local searches for churches, yoga studios, and wellness centers with Google Business Profile optimization, local citations, and location-based content.',
+    icon: '05',
+  },
+  {
+    title: 'Link Authority & Brand Mentions',
+    description: 'Build a trustworthy link profile through editorial placements, podcast appearances, and industry directories specific to the spiritual and wellness space.',
+    icon: '06',
+  },
+];
+
+const faqs = [
+  {
+    question: 'What is GEO (Generative Engine Optimization)?',
+    answer: 'GEO is the practice of optimizing your content and brand presence to appear in AI-generated answers from tools like Google SGE, Perplexity AI, and ChatGPT. As more people use AI tools for research, having your spiritual brand mentioned in AI responses can dramatically increase your visibility. It requires structured content, clear expertise signals, and consistent brand authority.',
+  },
+  {
+    question: 'How long does SEO take to show results for spiritual brands?',
+    answer: 'Technical SEO improvements typically show results within 2-3 months. Content-driven authority building takes 6-12 months to show significant organic traffic growth. Local SEO for churches and studios can show results in as little as 4-8 weeks. The important thing is that SEO compounds over time — the investment you make today keeps paying returns for years.',
+  },
+  {
+    question: 'What structured data schema is most important for spiritual organizations?',
+    answer: 'For spiritual organizations, the most valuable schema types include Organization, LocalBusiness (for churches and studios), Service, FAQPage, and Article. For churches specifically, adding Event schema for services and programs can significantly increase visibility in local search. Implementing BreadcrumbList schema improves navigation appearance in SERPs.',
+  },
+];
+---
+
+<Layout
+  title="Meditation Center Marketing | Spiritual & Mindfulness Business Growth | Stramasa"
+  description="Marketing strategies for meditation centers, mindfulness studios, and contemplative practice spaces. Build your center's digital authority and attract more students with Stramasa."
+  canonical="/meditation-center-marketing/"
+  category="Meditation Marketing"
+  publishDate="2025-03-01"
+>
+  <SchemaMarkup
+    type="Service"
+    name="Meditation Center Marketing"
+    description="Digital marketing and SEO authority building for meditation centers, mindfulness studios, and contemplative practice organizations."
+    url="https://spiritual.stramasa.com/meditation-center-marketing/"
+    serviceType="Meditation Center Marketing"
+  />
+
+  <GrowthHeader />
+
+  <div class="container">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Spiritual Marketing', href: '/spiritual-marketing/' },
+      { label: 'Meditation Center Marketing' },
+    ]} />
+  </div>
+
+  <Hero
+    badge="Meditation Center Growth"
+    headline='Grow Your Meditation Center with <span class="text-gradient">Digital Authority</span>'
+    subheadline="Attract more students to your meditation center, mindfulness studio, or contemplative practice space. Stramasa builds the SEO authority, content strategy, and digital presence that puts your center on the map — locally and globally."
+    ctaLabel="Get Your Center's Growth Plan"
+    ctaHref="/contact/"
+    ctaSecondaryLabel="All Wellness Marketing"
+    ctaSecondaryHref="/wellness-marketing/"
+  />
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container intro-content">
+      <div class="intro-text">
+        <span class="section-label">The Meditation Center Challenge</span>
+        <h2>Meditation Centers Face Unique Marketing Challenges</h2>
+        <p>Meditation centers occupy a unique space in the wellness landscape. Your students seek stillness, transformation, and a trusted teacher — not a polished sales funnel. Yet, without a strong digital presence, even the most profound meditation center can remain invisible to the very people who need what it offers.</p>
+        <p style="margin-top:16px;">Stramasa's Growth Programs for meditation centers respect this tension. We build digital authority that helps seekers find you — through mindful SEO, authentic content, and a digital presence that reflects the quality and depth of what you offer in person.</p>
+      </div>
+      <div class="intro-image">
+        <img
+          src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=700"
+          alt="Meditation center and mindfulness studio marketing"
+          width="500"
+          height="360"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO & GEO Strategies -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="text-center" style="max-width:640px;margin:0 auto 56px;">
+        <span class="section-label">SEO & GEO Strategies</span>
+        <h2>SEO and GEO Strategies for Meditation Centers</h2>
+        <p style="color:var(--charcoal-600);font-size:1.0625rem;">From local search to AI-generated answers, these are the six strategies that build lasting digital authority for meditation businesses.</p>
+      </div>
+      <div class="strategies-grid">
+        {strategies.map(strategy => (
+          <div class="strategy-card">
+            <span class="strategy-num text-gradient">{strategy.icon}</span>
+            <h3>{strategy.title}</h3>
+            <p>{strategy.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQSection
+    headline="Meditation Center Marketing FAQs"
+    faqs={faqs}
+  />
+
+  <!-- Internal Links Section -->
+  <section class="section-sm">
+    <div class="container">
+      <h2 style="text-align:center;margin-bottom:32px;">More Spiritual Marketing Resources</h2>
+      <div class="links-grid">
+        <a href="/spiritual-marketing/" class="link-card">Spiritual Marketing Agency</a>
+        <a href="/wellness-marketing/" class="link-card">Wellness Business Growth</a>
+        <a href="/church-marketing/" class="link-card">Church Marketing Strategy</a>
+        <a href="/resources/guide-one/" class="link-card">Free Marketing Guide</a>
+        <a href="/case-studies/" class="link-card">Case Studies</a>
+        <a href="/resources/seo-strategy-guide/" class="link-card">SEO Strategy Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Ready to Fill Your Meditation Center?"
+    subheadline="Let Stramasa build the digital presence that brings more students through your doors and builds your center's lasting online authority."
+  />
+
+  <GrowthFooter />
+</Layout>
+
+<style>
+  .intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .intro-text h2 { margin-bottom: 16px; }
+
+  .intro-text p {
+    color: var(--charcoal-600);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .intro-image img {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .strategies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .strategy-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+  }
+
+  .strategy-num {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  .strategy-card h3 { font-size: 1.0625rem; margin-bottom: 10px; }
+
+  .strategy-card p {
+    font-size: 0.9375rem;
+    color: var(--charcoal-600);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .link-card {
+    padding: 12px 20px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--blue-600);
+    text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .link-card:hover {
+    background: var(--white);
+    border-color: var(--blue-400);
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .intro-content { grid-template-columns: 1fr; gap: 40px; }
+    .intro-image { order: -1; }
+    .strategies-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 580px) {
+    .strategies-grid { grid-template-columns: 1fr; }
+  }
+</style>

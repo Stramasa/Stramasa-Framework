@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spiritual.stramasa.com/sitemap-index.xml

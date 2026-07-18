@@ -1,0 +1,213 @@
+---
+const navLinks = [
+  { label: 'Services', href: '/spiritual-marketing/' },
+  { label: 'Strategy', href: '/spiritual-branding/' },
+  { label: 'Resources', href: '/resources/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+  { label: 'About', href: '/about/' },
+];
+---
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo-link" aria-label="Stramasa Spiritual Marketing - Home">
+      <img
+        src="/stramasa_logo_white_2023.png"
+        alt="Stramasa"
+        width="160"
+        height="40"
+        loading="eager"
+        class="logo-img"
+      />
+      <span class="vertical-badge">Spiritual Marketing</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class="nav-link"
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener noreferrer' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a href="/contact/" class="btn btn-primary header-cta">
+      Get a Strategy Call
+    </a>
+
+    <button class="mobile-toggle" aria-label="Toggle navigation" id="mobile-toggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav-list">
+      {navLinks.map(link => (
+        <li>
+          <a href={link.href} class="mobile-nav-link">{link.label}</a>
+        </li>
+      ))}
+      <li>
+        <a href="/contact/" class="btn btn-primary">
+          Get a Strategy Call
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26, 26, 46, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .site-header.scrolled {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 72px;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .logo-img {
+    height: 32px;
+    width: auto;
+  }
+
+  .vertical-badge {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--teal-300);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    padding-left: 12px;
+    white-space: nowrap;
+  }
+
+  .main-nav { flex: 1; }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+  }
+
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+    border-radius: var(--radius-sm);
+    transition: color 0.15s, background 0.15s;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: var(--white);
+    background: rgba(255,255,255,0.08);
+    text-decoration: none;
+  }
+
+  .header-cta {
+    flex-shrink: 0;
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+  }
+
+  .mobile-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.2s;
+  }
+
+  .mobile-nav {
+    display: none;
+    padding: 16px 24px 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mobile-nav.open { display: block; }
+
+  .mobile-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  @media (max-width: 900px) {
+    .main-nav { display: none; }
+    .header-cta { display: none; }
+    .mobile-toggle { display: flex; }
+    .vertical-badge { display: none; }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const nav = document.getElementById('mobile-nav');
+  const header = document.getElementById('site-header');
+
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('open');
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+</script>

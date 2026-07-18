@@ -1,0 +1,135 @@
+---
+export interface Service {
+  icon: string;
+  title: string;
+  description: string;
+  href?: string;
+}
+
+export interface Props {
+  badge?: string;
+  headline: string;
+  subheadline?: string;
+  services: Service[];
+  columns?: 2 | 3 | 4;
+}
+
+const {
+  badge,
+  headline,
+  subheadline,
+  services,
+  columns = 3,
+} = Astro.props;
+---
+
+<section class="section service-section">
+  <div class="container">
+    <div class="section-header text-center">
+      {badge && <span class="section-label">{badge}</span>}
+      <h2>{headline}</h2>
+      {subheadline && <p class="section-sub">{subheadline}</p>}
+    </div>
+
+    <div class={`services-grid cols-${columns}`}>
+      {services.map(service => (
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true" set:html={service.icon} />
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+          {service.href && (
+            <a href={service.href} class="service-link">
+              Learn more
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    max-width: 680px;
+    margin: 0 auto 56px;
+  }
+
+  .section-header h2 { margin-bottom: 16px; }
+
+  .section-sub {
+    font-size: 1.0625rem;
+    color: var(--charcoal-600);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .services-grid {
+    display: grid;
+    gap: 24px;
+  }
+
+  .cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  }
+
+  .service-card:hover {
+    border-color: var(--blue-400);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(20,184,166,0.1));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--blue-600);
+  }
+
+  .service-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    color: var(--charcoal-900);
+  }
+
+  .service-card p {
+    font-size: 0.9375rem;
+    color: var(--charcoal-600);
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--blue-600);
+    text-decoration: none;
+  }
+
+  .service-link:hover { text-decoration: underline; }
+
+  @media (max-width: 900px) {
+    .cols-4 { grid-template-columns: repeat(2, 1fr); }
+    .cols-3 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 580px) {
+    .cols-4, .cols-3, .cols-2 { grid-template-columns: 1fr; }
+  }
+</style>

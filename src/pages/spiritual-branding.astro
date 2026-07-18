@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GrowthHeader from '../components/GrowthHeader.astro';
+import GrowthFooter from '../components/GrowthFooter.astro';
+import Hero from '../components/Hero.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import CTASection from '../components/CTASection.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+
+const services = [
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    title: 'Brand Identity Development',
+    description: 'Craft a spiritual brand identity — including positioning, voice, visual language, and core messaging — that is authentic, compelling, and unmistakably yours.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+    title: 'Brand Messaging Strategy',
+    description: 'Develop a clear, resonant brand narrative that communicates your unique gifts and differentiates you from others — so the right people instantly feel they\'ve found exactly who they were looking for.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+    title: 'Online Brand Presence & Reputation',
+    description: 'Build your reputation as a genuinely helpful, trustworthy presence through strategic content, PR, podcast appearances, and cross-platform visibility in your spiritual niche.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6s+1-3 5-3 7 3 7 3-1 3-5 3-7-3-7-3z"/><path d="M22 6s-1-3-5-3-7 3-7 3 1 3 5 3 7-3 7-3z"/><line x1="1" y1="17" x2="23" y2="17"/><path d="M5 17a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5"/></svg>',
+    title: 'Brand Story & Mission Clarity',
+    description: 'Articulate your origin story, mission, values, and transformation promise in ways that resonate deeply with seekers and clients in your community.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>',
+    title: 'Website Brand Alignment',
+    description: 'Align your website experience with your brand strategy — ensuring every page communicates clarity, warmth, and your spiritual brand\'s unique promise to the people you serve.',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    title: 'Audience Persona Development',
+    description: 'Build deep, research-backed profiles of your ideal spiritual audience members so every piece of content and campaign speaks directly to their needs.',
+  },
+];
+---
+
+<Layout
+  title="Spiritual Brand Positioning & Branding Strategy | Stramasa"
+  description="Build an authentic, deeply resonant spiritual brand that draws the right people to you. Stramasa's spiritual branding services include identity, messaging, and brand clarity tailored for spiritual entrepreneurs and organizations."
+  canonical="/spiritual-branding/"
+  category="Spiritual Branding"
+  publishDate="2025-02-01"
+>
+  <SchemaMarkup
+    type="Service"
+    name="Spiritual Brand Positioning Services"
+    description="Brand identity, messaging strategy, and online presence building for spiritual brands and wellness organizations."
+    url="https://spiritual.stramasa.com/spiritual-branding/"
+    serviceType="Brand Strategy"
+  />
+
+  <GrowthHeader />
+
+  <div class="container">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Spiritual Marketing', href: '/spiritual-marketing/' },
+      { label: 'Spiritual Branding' },
+    ]} />
+  </div>
+
+  <Hero
+    badge="Spiritual Brand Positioning"
+    headline='Build a Spiritual Brand That <span class="text-gradient">Feels Like You</span>'
+    subheadline="Your brand is more than a logo — it's the promise you make and the feeling people get when they find you. Stramasa helps spiritual brands develop deep positioning, clear messaging, and the kind of authentic clarity that draws the right clients and communities to you."
+    ctaLabel="Build Your Brand Strategy"
+    ctaHref="/contact/"
+    ctaSecondaryLabel="Spiritual Marketing Overview"
+    ctaSecondaryHref="/spiritual-marketing/"
+  />
+
+  <!-- Brand Pillars -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="max-width:640px;margin:0 auto 56px;">
+        <span class="section-label">The Stramasa Brand Framework</span>
+        <h2>The Three Pillars of Spiritual Brand Clarity</h2>
+        <p style="color:var(--charcoal-600);font-size:1.0625rem;">Spiritual brands that grow consistently have three things in common: clear positioning, authentic voice, and genuine demonstrated presence.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar">
+          <div class="pillar-number text-gradient">01</div>
+          <h3>Positioning Clarity</h3>
+          <p>A well-positioned spiritual brand knows exactly who it serves, what transformation it delivers, and why it's different from every alternative. Without this, even excellent content fails to convert.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-number text-gradient">02</div>
+          <h3>Authentic Voice</h3>
+          <p>Spiritual audiences have finely tuned authenticity detectors. Your brand voice must genuinely reflect your values, approach, and the experience you deliver — not an aspirational version of it.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-number text-gradient">03</div>
+          <h3>Consistent Presence & Proof</h3>
+          <p>Credibility is built through consistent demonstration of your knowledge and care — through content, community proof, and real results that show people you genuinely deliver on the transformation you promise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ServiceSection
+    badge="Branding Services"
+    headline="Spiritual Branding & Positioning Services"
+    subheadline="From initial brand discovery to ongoing thought leadership, we build every dimension of your spiritual brand's clarity, presence, and resonance."
+    services={services}
+    columns={3}
+  />
+
+  <!-- Related Links -->
+  <section class="section-sm" style="background:var(--gray-50);border-top:1px solid var(--gray-200);">
+    <div class="container">
+      <h2 style="margin-bottom:32px;text-align:center;">Explore Related Services</h2>
+      <div class="related-grid">
+        <a href="/spiritual-marketing/" class="related-card">
+          <h3>Spiritual Marketing</h3>
+          <p>Full-spectrum digital marketing for spiritual brands and organizations.</p>
+          <span class="related-link">Learn more &rarr;</span>
+        </a>
+        <a href="/wellness-marketing/" class="related-card">
+          <h3>Wellness Marketing</h3>
+          <p>Growth strategies for yoga studios, retreat centers, and wellness brands.</p>
+          <span class="related-link">Learn more &rarr;</span>
+        </a>
+        <a href="/church-marketing/" class="related-card">
+          <h3>Church Marketing</h3>
+          <p>Digital marketing and growth strategies built for churches and ministries.</p>
+          <span class="related-link">Learn more &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Ready to Build a Spiritual Brand That Draws Your People In?"
+    subheadline="Work with Stramasa to clarify your positioning, find your authentic voice, and build the kind of resonance that makes the right people feel they've finally found exactly who they were looking for."
+  />
+
+  <GrowthFooter />
+</Layout>
+
+<style>
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .pillar {
+    padding: 32px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+  }
+
+  .pillar-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .pillar h3 { margin-bottom: 10px; }
+
+  .pillar p {
+    font-size: 0.9375rem;
+    color: var(--charcoal-600);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .related-card {
+    display: block;
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+
+  .related-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--blue-400);
+    text-decoration: none;
+  }
+
+  .related-card h3 {
+    color: var(--charcoal-900);
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+  }
+
+  .related-card p {
+    font-size: 0.9375rem;
+    color: var(--charcoal-600);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .related-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--blue-600);
+  }
+
+  @media (max-width: 900px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>

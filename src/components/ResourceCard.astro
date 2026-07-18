@@ -1,0 +1,129 @@
+---
+export interface Props {
+  title: string;
+  excerpt: string;
+  category: string;
+  readTime: string;
+  href: string;
+  publishDate?: string;
+}
+
+const { title, excerpt, category, readTime, href, publishDate } = Astro.props;
+---
+
+<article class="resource-card">
+  <div class="resource-icon" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+  </div>
+  <div class="resource-body">
+    <div class="resource-meta">
+      <span class="resource-category">{category}</span>
+      <span class="resource-read">{readTime} read</span>
+    </div>
+    <h3><a href={href}>{title}</a></h3>
+    <p>{excerpt}</p>
+    {publishDate && <time class="resource-date" datetime={publishDate}>{publishDate}</time>}
+    <a href={href} class="resource-link">
+      Read Guide
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</article>
+
+<style>
+  .resource-card {
+    display: flex;
+    gap: 20px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+
+  .resource-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--blue-400);
+  }
+
+  .resource-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(20,184,166,0.1));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-600);
+    margin-top: 2px;
+  }
+
+  .resource-body { flex: 1; }
+
+  .resource-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .resource-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .resource-read {
+    font-size: 0.8125rem;
+    color: var(--gray-500);
+  }
+
+  .resource-body h3 {
+    font-size: 1.0625rem;
+    margin-bottom: 8px;
+  }
+
+  .resource-body h3 a {
+    color: var(--charcoal-900);
+    text-decoration: none;
+  }
+
+  .resource-body h3 a:hover { text-decoration: underline; }
+
+  .resource-body p {
+    font-size: 0.9375rem;
+    color: var(--charcoal-600);
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+
+  .resource-date {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--gray-400);
+    margin-bottom: 12px;
+  }
+
+  .resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--blue-600);
+    text-decoration: none;
+  }
+
+  .resource-link:hover { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    .resource-card { flex-direction: column; }
+    .resource-icon { width: 40px; height: 40px; }
+  }
+</style>

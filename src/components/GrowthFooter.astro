@@ -1,0 +1,180 @@
+---
+const footerLinks = {
+  services: [
+    { label: 'Spiritual Marketing', href: '/spiritual-marketing/' },
+    { label: 'Church Marketing', href: '/church-marketing/' },
+    { label: 'Spiritual Branding', href: '/spiritual-branding/' },
+    { label: 'Wellness Marketing', href: '/wellness-marketing/' },
+  ],
+  resources: [
+    { label: 'Marketing Guide', href: '/resources/' },
+    { label: 'SEO Strategy', href: '/resources/seo-strategy-guide/' },
+    { label: 'Content Playbook', href: '/resources/content-playbook/' },
+    { label: 'Case Studies', href: '/case-studies/' },
+  ],
+  company: [
+    { label: 'About Stramasa', href: '/about/' },
+    { label: 'Blog', href: 'https://www.stramasa.com/blog/', external: true },
+    { label: 'Contact', href: '/contact/' },
+    { label: 'www.stramasa.com', href: 'https://www.stramasa.com/', external: true },
+  ],
+};
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo-link" aria-label="Stramasa - Home">
+          <img
+            src="/stramasa_logo_white_2023.png"
+            alt="Stramasa"
+            width="140"
+            height="36"
+            loading="lazy"
+          />
+        </a>
+        <p class="footer-tagline">
+          Stramasa's specialized Growth Programs for spiritual entrepreneurs, practitioners, retreats, and purpose-driven brands — built for search authority, community growth, and AI visibility.
+        </p>
+        <a href="/contact/" class="btn btn-primary footer-cta">
+          Book a Strategy Call
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          {footerLinks.services.map(link => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Resources</h4>
+        <ul class="footer-links">
+          {footerLinks.resources.map(link => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          {footerLinks.company.map(link => (
+            <li>
+              <a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener noreferrer' : undefined}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright">&copy; {currentYear} Stramasa. All rights reserved.</p>
+      <p class="footer-note">Spiritual Marketing Growth Experts</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--charcoal-900);
+    color: rgba(255,255,255,0.75);
+  }
+
+  .footer-top {
+    padding: 72px 0 56px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+  }
+
+  .footer-logo-link { display: inline-block; margin-bottom: 20px; }
+
+  .footer-tagline {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 24px;
+    max-width: 320px;
+  }
+
+  .footer-cta { font-size: 0.9rem; padding: 12px 24px; }
+
+  .footer-heading {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .footer-links a:hover {
+    color: var(--teal-300);
+    text-decoration: none;
+  }
+
+  .footer-bottom {
+    padding: 24px 0;
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .copyright {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+  }
+
+  .footer-note {
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 580px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>

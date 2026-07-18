@@ -1,0 +1,383 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GrowthHeader from '../components/GrowthHeader.astro';
+import GrowthFooter from '../components/GrowthFooter.astro';
+import CTASection from '../components/CTASection.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+---
+
+<Layout
+  title="About Stramasa | Spiritual Marketing Agency & Growth Experts"
+  description="Stramasa is a specialized spiritual marketing agency serving churches, wellness brands, spiritual teachers, and faith-based organizations. Learn what drives us and who we serve."
+  canonical="/about/"
+  category="About"
+>
+  <SchemaMarkup
+    type="WebSite"
+    name="About Stramasa — Spiritual Marketing Agency"
+    description="The story behind Stramasa's focus on spiritual marketing and our mission to grow the organizations that matter most."
+    url="https://spiritual.stramasa.com/about/"
+  />
+
+  <GrowthHeader />
+
+  <div class="container">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'About' },
+    ]} />
+  </div>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-inner">
+        <span class="section-label">Our Story & Mission</span>
+        <h1>The Spiritual Marketing Agency Behind Meaningful Brands</h1>
+        <p class="hero-lead">Stramasa was built for one purpose: to give spiritual organizations the same quality of digital marketing that the biggest brands in the world take for granted — without compromising the authenticity that makes your work matter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Spiritual -->
+  <section class="section">
+    <div class="container story-grid">
+      <div class="story-content">
+        <span class="section-label">Why We Specialize</span>
+        <h2>Spiritual Marketing Requires a Different Kind of Expertise</h2>
+        <p>Most agencies work across every industry — retail, SaaS, finance, hospitality. They apply the same frameworks to whoever walks in the door. We made a deliberate choice not to.</p>
+        <p>Spiritual audiences are discerning. They value authenticity above almost everything. They research deeply, move on trust, and choose organizations based on values alignment — not clever ad copy. Marketing built for other industries doesn't just underperform here; it erodes the very credibility these organizations are built on.</p>
+        <p>So we built Growth Programs from the ground up, tuned specifically for spiritual, wellness, and faith-based brands. Every strategy, every piece of content, every campaign is designed with that distinction in mind.</p>
+      </div>
+      <div class="story-image">
+        <img
+          src="https://images.pexels.com/photos/10530967/pexels-photo-10530967.jpeg?auto=compress&cs=tinysrgb&w=700"
+          alt="Serene spiritual landscape — sunset over water"
+          width="520"
+          height="400"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Handle -->
+  <section class="section mission-section">
+    <div class="container">
+      <div class="text-center" style="max-width:680px;margin:0 auto 56px;">
+        <span class="section-label">What We Take Over</span>
+        <h2>The Marketing Work That Pulls Spiritual Leaders Away From Their Gift</h2>
+        <p style="color:var(--charcoal-600);font-size:1.0625rem;line-height:1.75;">Every spiritual leader we've worked with became who they are because of a calling — not a love of keyword research. Yet most spend a disproportionate share of their energy on exactly the tasks that drain them. We exist to take that weight off completely.</p>
+      </div>
+      <div class="drain-grid">
+        <div class="drain-card">
+          <div class="drain-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h3>Content & SEO</h3>
+          <p>From keyword strategy to published articles — consistent, optimized content that builds topical authority and earns organic search visibility over time.</p>
+        </div>
+        <div class="drain-card">
+          <div class="drain-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <h3>Discoverability & Local Search</h3>
+          <p>Technical SEO, Google Business optimization, schema markup, and backlink development — the infrastructure that makes your organization findable by the people searching for you.</p>
+        </div>
+        <div class="drain-card">
+          <div class="drain-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <h3>Digital Advertising</h3>
+          <p>Paid campaigns across Google, Meta, and niche platforms — targeted to audiences who are actively searching for what you offer and ready to engage.</p>
+        </div>
+        <div class="drain-card">
+          <div class="drain-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>Email & Community Nurture</h3>
+          <p>List strategy, automated sequences, and ongoing newsletters that keep your audience engaged, informed, and connected to your mission between touchpoints.</p>
+        </div>
+        <div class="drain-card">
+          <div class="drain-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Growth Strategy & Analytics</h3>
+          <p>Competitive research, funnel design, conversion optimization, and transparent monthly reporting — so every decision is grounded in data, not guesswork.</p>
+        </div>
+        <div class="drain-card">
+          <div class="drain-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Launches & Campaign Management</h3>
+          <p>Full-funnel planning and execution for retreats, programs, giving campaigns, and seasonal events — coordinated across channels for maximum reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Statement -->
+  <section class="mission-statement">
+    <div class="container">
+      <div class="mission-inner">
+        <div class="mission-quote">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="quote-icon"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          <blockquote>
+            You became a teacher, a healer, a guide because of a gift that only you carry. Our mission is to make sure the world can find that gift — and that you have the energy and freedom to keep sharing it.
+          </blockquote>
+          <p class="mission-attribution">— The Stramasa Team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="section" style="background:var(--gray-50);border-top:1px solid var(--gray-200);">
+    <div class="container">
+      <div class="text-center" style="max-width:600px;margin:0 auto 56px;">
+        <span class="section-label">Who We Serve</span>
+        <h2>Spiritual Marketing Experts for Every Kind of Organization</h2>
+      </div>
+      <div class="serve-grid">
+        <a href="/church-marketing/" class="serve-card">
+          <div class="serve-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Churches & Ministries</h3>
+          <p>Local SEO, congregation growth, giving campaigns, and sermon distribution for churches of every size and denomination.</p>
+          <span class="serve-link">Church Marketing &rarr;</span>
+        </a>
+        <a href="/wellness-marketing/" class="serve-card">
+          <div class="serve-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Wellness Brands</h3>
+          <p>Yoga studios, retreat centers, meditation businesses, and holistic health practitioners ready to grow with purpose.</p>
+          <span class="serve-link">Wellness Marketing &rarr;</span>
+        </a>
+        <a href="/spiritual-marketing/" class="serve-card">
+          <div class="serve-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Spiritual Teachers & Coaches</h3>
+          <p>Individual practitioners, spiritual directors, life coaches, and energy healers building their personal brand and client base.</p>
+          <span class="serve-link">Spiritual Marketing &rarr;</span>
+        </a>
+        <a href="/spiritual-branding/" class="serve-card">
+          <div class="serve-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Faith-Based Nonprofits</h3>
+          <p>Faith-aligned nonprofits and charities growing their donor base, community reach, and digital presence with integrity.</p>
+          <span class="serve-link">Spiritual Branding &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Ready to Grow Your Spiritual Brand With Experts Who Get It?"
+    subheadline="Book a free strategy call with our spiritual marketing team. We'll listen to where you are, map out what's possible, and show you exactly how we'd approach your growth."
+    ctaLabel="Book a Free Strategy Call"
+  />
+
+  <GrowthFooter />
+</Layout>
+
+<style>
+  .about-hero {
+    padding: 80px 0 64px;
+    background: var(--gradient-hero);
+  }
+
+  .about-hero-inner { max-width: 800px; }
+
+  .about-hero .section-label {
+    color: var(--teal-300);
+    background: none;
+    -webkit-text-fill-color: var(--teal-300);
+  }
+
+  .about-hero h1 {
+    color: var(--white);
+    margin-top: 10px;
+    margin-bottom: 24px;
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+  }
+
+  .hero-lead {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.84);
+    line-height: 1.75;
+    max-width: 720px;
+    margin: 0;
+  }
+
+  /* Story section */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .story-content h2 { margin-bottom: 20px; }
+
+  .story-content p {
+    color: var(--charcoal-600);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .story-image img {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+  }
+
+  /* What we handle */
+  .mission-section { background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+
+  .drain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .drain-card {
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+  }
+
+  .drain-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(20,184,166,0.08));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-600);
+    margin-bottom: 16px;
+  }
+
+  .drain-card h3 { font-size: 1.0625rem; margin-bottom: 10px; }
+
+  .drain-card p {
+    font-size: 0.9375rem;
+    color: var(--charcoal-600);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* Mission quote */
+  .mission-statement {
+    padding: 80px 0;
+    background: var(--charcoal-900);
+  }
+
+  .mission-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .quote-icon {
+    color: var(--teal-400);
+    margin: 0 auto 28px;
+    opacity: 0.7;
+  }
+
+  blockquote {
+    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .mission-attribution {
+    font-size: 0.9375rem;
+    color: var(--teal-400);
+    font-weight: 600;
+  }
+
+  /* Who We Serve */
+  .serve-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .serve-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  }
+
+  .serve-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal-400);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .serve-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(37,99,235,0.07), rgba(20,184,166,0.07));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-600);
+  }
+
+  .serve-card h3 {
+    font-size: 1rem;
+    color: var(--charcoal-900);
+    margin: 0;
+  }
+
+  .serve-card p {
+    font-size: 0.9rem;
+    color: var(--charcoal-600);
+    line-height: 1.65;
+    margin: 0;
+    flex: 1;
+  }
+
+  .serve-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--blue-600);
+  }
+
+  @media (max-width: 1100px) {
+    .serve-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .story-grid { grid-template-columns: 1fr; gap: 40px; }
+    .story-image { order: -1; }
+    .drain-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .drain-grid { grid-template-columns: 1fr; }
+    .serve-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+export interface Props {
+  type: 'Organization' | 'WebSite' | 'Service' | 'Article';
+  name?: string;
+  description?: string;
+  url?: string;
+  serviceType?: string;
+  areaServed?: string;
+  headline?: string;
+  author?: string;
+  publishDate?: string;
+}
+
+const {
+  type,
+  name = 'Stramasa — Spiritual Marketing Agency',
+  description,
+  url = 'https://spiritual.stramasa.com',
+  serviceType,
+  areaServed = 'Worldwide',
+  headline,
+  author = 'Stramasa',
+  publishDate,
+} = Astro.props;
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Stramasa',
+  url: 'https://www.stramasa.com',
+  logo: 'https://spiritual.stramasa.com/stramasa_Color_logo_Transparent.png',
+  sameAs: ['https://www.stramasa.com'],
+  description: 'B2B marketing technology and growth consulting for specialized industries.',
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name,
+  url,
+  description,
+  publisher: { '@type': 'Organization', name: 'Stramasa', url: 'https://www.stramasa.com' },
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name,
+  description,
+  url,
+  serviceType,
+  areaServed,
+  provider: { '@type': 'Organization', name: 'Stramasa', url: 'https://www.stramasa.com' },
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline,
+  description,
+  url,
+  author: { '@type': 'Organization', name: author },
+  publisher: { '@type': 'Organization', name: 'Stramasa', url: 'https://www.stramasa.com' },
+  datePublished: publishDate,
+};
+
+const schemaMap: Record<string, object> = {
+  Organization: orgSchema,
+  WebSite: websiteSchema,
+  Service: serviceSchema,
+  Article: articleSchema,
+};
+
+const schema = schemaMap[type] ?? orgSchema;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

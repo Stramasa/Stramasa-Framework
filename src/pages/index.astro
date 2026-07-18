@@ -1,0 +1,1137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GrowthHeader from '../components/GrowthHeader.astro';
+import GrowthFooter from '../components/GrowthFooter.astro';
+import Hero from '../components/Hero.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+import ResourceCard from '../components/ResourceCard.astro';
+import CTASection from '../components/CTASection.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+
+const growthPrograms = [
+  {
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>',
+    title: 'Spiritual Marketing Strategy',
+    description: 'Custom growth roadmaps built around your audience, niche, and business model — not generic templates.',
+  },
+  {
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
+    title: 'SEO & GEO Authority',
+    description: 'Rank on Google and appear in AI answer engines with topical authority strategies built for spiritual niches.',
+  },
+  {
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+    title: 'Content Marketing',
+    description: 'Authority content that answers your audience\'s deepest questions and builds lasting organic reach.',
+  },
+  {
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    title: 'Spiritual Branding & Identity',
+    description: 'Brand identity, messaging frameworks, and narrative development so your positioning resonates authentically with the right audience.',
+  },
+  {
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>',
+    title: 'Digital Campaigns',
+    description: 'Paid advertising on Google, Meta, and YouTube crafted for spiritually-aligned audiences and conversion goals.',
+  },
+  {
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+    title: 'Email Marketing',
+    description: 'Nurture sequences, newsletters, and launch campaigns that deepen relationships and drive consistent revenue.',
+  },
+  {
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    title: 'Community Growth',
+    description: 'Build and activate loyal communities around your brand across email, social, and owned platforms.',
+  },
+  {
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    title: 'Website & Conversion Optimization',
+    description: 'Turn your digital presence into a client and booking machine with conversion-focused design and messaging.',
+  },
+];
+---
+
+<Layout
+  title="Spiritual Marketing Agency | Stramasa — Growth Programs for Practitioners, Retreats & Brands"
+  description="Stramasa is a specialized spiritual marketing agency offering proven growth programs for spiritual entrepreneurs, practitioners, retreat organizers, coaches, healers, and purpose-driven brands."
+  canonical="/"
+  category="Spiritual Marketing"
+>
+  <SchemaMarkup type="WebSite" name="Stramasa — Spiritual Marketing Agency" description="Specialized spiritual marketing growth programs for spiritual entrepreneurs, practitioners, retreats, and purpose-driven brands." url="https://spiritual.stramasa.com" />
+  <SchemaMarkup type="Organization" />
+
+  <GrowthHeader />
+
+  <Hero
+    badge="Stramasa Spiritual Marketing Agency"
+    headline='Grow Your Spiritual Business with <span class="text-gradient">Expert Marketing</span>'
+    subheadline="Stramasa partners with spiritual entrepreneurs, practitioners, retreat leaders, course creators, and purpose-driven brands. We handle the marketing, SEO, and digital growth systems — so you can focus on the work only you can do."
+    ctaLabel="Get Your Growth Strategy"
+    ctaHref="/contact/"
+    ctaSecondaryLabel="See Growth Programs"
+    ctaSecondaryHref="/spiritual-marketing/"
+    heroImageSrc="/images/hero-sunset-lake.jpg"
+  />
+
+  <!-- Stats Strip -->
+  <section class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat">
+        <span class="stat-number">3x</span>
+        <span class="stat-label">Average client growth</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">150+</span>
+        <span class="stat-label">Spiritual brands served</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">Top 3</span>
+        <span class="stat-label">Average Google rankings</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">12+</span>
+        <span class="stat-label">Spiritual niches</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve — 3 Pillars -->
+  <section class="section pillars-section">
+    <div class="container">
+      <div class="text-center" style="max-width:680px;margin:0 auto 56px;">
+        <span class="section-label">Who We Serve</span>
+        <h2>Proven Growth Programs for Every Stage of Your Spiritual Business</h2>
+        <p style="color:var(--charcoal-600);font-size:1.0625rem;line-height:1.75;">Whether you're building a personal brand, filling retreats, or scaling a course — Stramasa has a proven growth program designed specifically for where you are and where you're going.</p>
+      </div>
+      <div class="pillars-grid">
+
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <div class="pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <span class="pillar-number">01</span>
+          </div>
+          <h3>Grow Your Spiritual Practice & Personal Brand</h3>
+          <div class="pillar-tags">
+            <span class="pillar-tag">Coaches</span>
+            <span class="pillar-tag">Healers</span>
+            <span class="pillar-tag">Guides</span>
+            <span class="pillar-tag">Teachers</span>
+            <span class="pillar-tag">Breathwork</span>
+            <span class="pillar-tag">Reiki</span>
+            <span class="pillar-tag">Mentors</span>
+            <span class="pillar-tag">Facilitators</span>
+          </div>
+          <p class="pillar-desc">Build visibility, attract aligned clients, and grow a loyal audience around your unique gifts — without spending your time on marketing.</p>
+          <div class="pillar-footer">
+            <ul class="pillar-outcomes">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Get found by aligned clients searching for your work
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Build a personal brand that communicates your authority
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Fill your calendar without constant outreach
+              </li>
+            </ul>
+            <a href="/contact/" class="pillar-cta">Start Growing Your Practice &rarr;</a>
+          </div>
+        </div>
+
+        <div class="pillar-card pillar-card--accent">
+          <div class="pillar-header">
+            <div class="pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="pillar-number">02</span>
+          </div>
+          <h3>Fill Your Retreats, Events & Communities</h3>
+          <div class="pillar-tags">
+            <span class="pillar-tag">Retreat Organizers</span>
+            <span class="pillar-tag">Workshops</span>
+            <span class="pillar-tag">Group Programs</span>
+            <span class="pillar-tag">Online Events</span>
+            <span class="pillar-tag">Memberships</span>
+            <span class="pillar-tag">Meditation</span>
+          </div>
+          <p class="pillar-desc">Move beyond one-to-one work. Build the audience and marketing systems that fill your retreats and spaces consistently.</p>
+          <div class="pillar-footer">
+            <ul class="pillar-outcomes">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Sell out retreats and workshops with targeted campaigns
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Build a community that grows your brand year-round
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Launch memberships and group offers that scale
+              </li>
+            </ul>
+            <a href="/contact/" class="pillar-cta">Fill Your Retreats &amp; Events &rarr;</a>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <div class="pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <span class="pillar-number">03</span>
+          </div>
+          <h3>Scale Your Courses, Programs & Products</h3>
+          <div class="pillar-tags">
+            <span class="pillar-tag">Course Creators</span>
+            <span class="pillar-tag">Authors</span>
+            <span class="pillar-tag">Educators</span>
+            <span class="pillar-tag">Digital Programs</span>
+            <span class="pillar-tag">Spiritual Products</span>
+          </div>
+          <p class="pillar-desc">Transform your expertise into a scalable income stream — reaching people far beyond your current audience with the right marketing systems.</p>
+          <div class="pillar-footer">
+            <ul class="pillar-outcomes">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Launch and evergreen your courses and digital programs
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Reach buyers actively searching for what you offer
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Build a scalable revenue model around your unique gifts
+              </li>
+            </ul>
+            <a href="/contact/" class="pillar-cta">Scale Your Offers &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Community Card — full width -->
+        <div class="community-card">
+          <div class="community-left">
+            <div class="community-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <span class="section-label" style="color:var(--teal-400);background:rgba(20,184,166,0.12);">Woven Through Every Program</span>
+              <h3 style="color:var(--white);margin-top:10px;">Community & Spiritual Brand Building</h3>
+              <p style="color:rgba(255,255,255,0.78);font-size:0.9375rem;line-height:1.7;margin-top:8px;">Community isn't a separate service — it's the foundation that amplifies everything. Stramasa weaves community building and authentic brand positioning into every growth program we run.</p>
+            </div>
+          </div>
+          <div class="community-pillars">
+            <div class="community-pillar">
+              <span class="cp-label">For Practitioners</span>
+              <p>An engaged community amplifies your work, generates referrals, and turns followers into loyal clients over time.</p>
+            </div>
+            <div class="community-pillar">
+              <span class="cp-label">For Events &amp; Retreats</span>
+              <p>A nurtured community fills your retreats from your existing audience first — before you spend on advertising.</p>
+            </div>
+            <div class="community-pillar">
+              <span class="cp-label">For Courses &amp; Products</span>
+              <p>Community creates repeat buyers who purchase your next offer because they already belong to your brand.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Growth Programs -->
+  <section class="section programs-section">
+    <div class="container">
+      <div class="text-center" style="max-width:640px;margin:0 auto 56px;">
+        <span class="section-label">Our Expertise</span>
+        <h2>Spiritual Marketing Growth Programs That Deliver Results</h2>
+        <p style="color:var(--charcoal-600);font-size:1.0625rem;line-height:1.75;">Stramasa's Growth Programs combine specialized spiritual marketing expertise, proven strategies, and full digital execution — designed specifically for spiritual businesses, not adapted from other industries.</p>
+      </div>
+      <div class="programs-grid">
+        {growthPrograms.map((p) => (
+          <div class="program-card">
+            <div class="program-icon" set:html={p.icon}></div>
+            <h3>{p.title}</h3>
+            <p>{p.description}</p>
+          </div>
+        ))}
+      </div>
+      <div class="text-center" style="margin-top:48px;">
+        <a href="/spiritual-marketing/" class="btn btn-outline">Explore All Growth Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Stramasa -->
+  <section class="section authority-section">
+    <div class="container authority-inner">
+      <div class="authority-content">
+        <span class="section-label">Why Stramasa</span>
+        <h2>A Spiritual Marketing Agency with Proven Specialization</h2>
+        <p>Generic agencies apply the same framework to every client. Stramasa works exclusively in the spiritual space — meaning every strategy, every campaign, and every piece of content is built with a deep understanding of what moves spiritual audiences and what doesn't.</p>
+        <ul class="authority-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Deep expertise in spiritual, wellness, and faith-based markets
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            SEO and GEO programs that build long-term search dominance
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            AI visibility optimization for Google SGE and AI answer engines
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Community-first approach: grow your audience, not just your traffic
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Transparent, measurable results — strategy backed by data
+          </li>
+        </ul>
+        <a href="/about/" class="btn btn-primary" style="margin-top:8px;">Meet the Team</a>
+      </div>
+      <div class="authority-visual">
+        <img
+          src="/images/spiritual-marketing-services-stramasa.jpg"
+          alt="Spiritual marketing growth strategy with Stramasa"
+          width="520"
+          height="400"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Supporting Expertise -->
+  <section class="section" style="background:var(--gray-50);border-top:1px solid var(--gray-200);">
+    <div class="container">
+      <div class="text-center" style="max-width:640px;margin:0 auto 48px;">
+        <span class="section-label">Additional Spiritual Marketing Expertise</span>
+        <h2>Specialized Programs for Every Spiritual Organization</h2>
+        <p style="color:var(--charcoal-600);font-size:1.0625rem;">Beyond personal brands and practitioners, Stramasa's growth programs extend to every kind of spiritual organization.</p>
+      </div>
+      <div class="expertise-grid">
+        <a href="/church-marketing/" class="expertise-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <div>
+            <h4>Church Marketing</h4>
+            <p>Congregation growth, local SEO, giving campaigns, and digital outreach for churches and ministries.</p>
+          </div>
+          <span class="expertise-arrow">&rarr;</span>
+        </a>
+        <a href="/wellness-marketing/" class="expertise-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div>
+            <h4>Wellness Marketing</h4>
+            <p>Yoga studios, retreat centers, and wellness brands seeking specialized digital marketing and growth.</p>
+          </div>
+          <span class="expertise-arrow">&rarr;</span>
+        </a>
+        <a href="/spiritual-branding/" class="expertise-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <h4>Spiritual Branding</h4>
+            <p>Brand identity, positioning, and authority building for spiritual organizations and conscious brands.</p>
+          </div>
+          <span class="expertise-arrow">&rarr;</span>
+        </a>
+        <a href="/meditation-center-marketing/" class="expertise-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4l2 2"/></svg>
+          <div>
+            <h4>Meditation Center Marketing</h4>
+            <p>SEO and digital growth for meditation studios, mindfulness centers, and contemplative communities.</p>
+          </div>
+          <span class="expertise-arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center" style="max-width:640px;margin:0 auto 48px;">
+        <span class="section-label">Results That Matter</span>
+        <h2>Spiritual Marketing Case Studies</h2>
+        <p style="color:var(--charcoal-600);font-size:1.0625rem;">See how Stramasa's growth programs have helped spiritual brands, practitioners, and organizations achieve measurable results.</p>
+      </div>
+      <div class="case-grid">
+        <CaseStudyCard
+          title="Spiritual Life Coach Quadruples Coaching Inquiries"
+          excerpt="A spiritual life coach with a decade of expertise and a scattered online presence. Stramasa built brand positioning, an SEO content cluster, and a lead system that filled her calendar."
+          industry="Spiritual Coaching"
+          result="4x coaching inquiries, 220% organic traffic in 9 months"
+          href="/case-studies/spiritual-coach-brand-growth/"
+          imageSrc="https://images.pexels.com/photos/5717718/pexels-photo-5717718.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <CaseStudyCard
+          title="Conscious Speaker & Retreat Brand Sells Out All Programs"
+          excerpt="A prominent spiritual speaker was filling retreats through constant effort. Stramasa built evergreen digital infrastructure that now sells out every retreat and grew course revenue 5x."
+          industry="Speaker & Retreat Business"
+          result="4 sold-out retreats, 5x digital course revenue"
+          href="/case-studies/speaker-retreat-brand-growth/"
+          imageSrc="https://images.pexels.com/photos/2695232/pexels-photo-2695232.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+        <CaseStudyCard
+          title="Spiritual Community Triples Paid Membership in 10 Months"
+          excerpt="An online spiritual community growing only through word-of-mouth. Stramasa built a precision organic acquisition engine and redesigned onboarding — membership tripled and churn fell 42%."
+          industry="Spiritual Community & Membership"
+          result="3x paid membership, 42% churn reduction"
+          href="/case-studies/spiritual-community-membership-growth/"
+          imageSrc="https://images.pexels.com/photos/7551617/pexels-photo-7551617.jpeg?auto=compress&cs=tinysrgb&w=600"
+        />
+      </div>
+      <div class="text-center" style="margin-top:40px;">
+        <a href="/case-studies/" class="btn btn-outline">View All Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Preview -->
+  <section class="section" style="background:var(--gray-50);border-top:1px solid var(--gray-200);">
+    <div class="container">
+      <div class="section-header text-center" style="max-width:640px;margin:0 auto 48px;">
+        <span class="section-label">Free Resources</span>
+        <h2>Spiritual Marketing Guides & Playbooks</h2>
+      </div>
+      <div class="resources-list">
+        <ResourceCard
+          title="The Complete Spiritual Marketing Guide for 2025"
+          excerpt="Everything you need to know about marketing your spiritual brand online — from SEO fundamentals to AI visibility strategies."
+          category="Marketing Strategy"
+          readTime="12 min"
+          href="/resources/guide-one/"
+          publishDate="2025-01-15"
+        />
+        <ResourceCard
+          title="SEO Strategy for Spiritual & Wellness Brands"
+          excerpt="A practical, step-by-step SEO playbook specifically designed for wellness coaches, spiritual teachers, and faith-based organizations."
+          category="SEO"
+          readTime="10 min"
+          href="/resources/seo-strategy-guide/"
+          publishDate="2025-02-10"
+        />
+        <ResourceCard
+          title="Content Marketing Playbook for Churches & Ministries"
+          excerpt="How to create content that attracts, converts, and retains your congregation while building lasting digital authority."
+          category="Content Strategy"
+          readTime="8 min"
+          href="/resources/content-playbook/"
+          publishDate="2025-03-05"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Awards -->
+  <section class="awards-section">
+    <div class="container">
+      <div class="awards-trust-row">
+        <p class="awards-eyebrow">Trusted by 450+ coaches, healers, retreat organizers, and spiritual brands worldwide</p>
+        <h2 class="awards-headline">The #1 Spiritual Marketing Agency Since 2003</h2>
+        <p class="awards-sub">Over two decades of specialized expertise, recognized year after year by the industry.</p>
+      </div>
+      <div class="awards-badges-row">
+        <div class="award-badge">
+          <div class="award-seal">
+            <div class="award-rays" aria-hidden="true"></div>
+            <div class="award-seal-inner">
+              <svg class="award-star" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span class="award-org">Spiritual Marketing</span>
+              <span class="award-year-num">2024</span>
+              <span class="award-type">Agency of Excellence</span>
+              <div class="award-stars-row">★ ★ ★ ★ ★</div>
+            </div>
+          </div>
+          <div class="award-ribbon">
+            <span>Recognized Leader</span>
+          </div>
+        </div>
+
+        <div class="award-badge award-badge--featured">
+          <div class="award-seal">
+            <div class="award-rays" aria-hidden="true"></div>
+            <div class="award-seal-inner">
+              <svg class="award-star" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span class="award-org">Spiritual Marketing</span>
+              <span class="award-year-num">2025</span>
+              <span class="award-type">Agency of Excellence</span>
+              <div class="award-stars-row">★ ★ ★ ★ ★</div>
+            </div>
+          </div>
+          <div class="award-ribbon">
+            <span>Recognized Leader</span>
+          </div>
+        </div>
+
+        <div class="award-badge">
+          <div class="award-seal">
+            <div class="award-rays" aria-hidden="true"></div>
+            <div class="award-seal-inner">
+              <svg class="award-star" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span class="award-org">Spiritual Marketing</span>
+              <span class="award-year-num">2026</span>
+              <span class="award-type">Agency of Excellence</span>
+              <div class="award-stars-row">★ ★ ★ ★ ★</div>
+            </div>
+          </div>
+          <div class="award-ribbon">
+            <span>Recognized Leader</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Ready to Grow Your Spiritual Brand With a Team That Specializes in It?"
+    subheadline="Book a free strategy call with Stramasa's spiritual marketing specialists. We'll understand your business, identify your highest-impact opportunities, and map out a growth program tailored to your goals."
+    ctaLabel="Book Your Free Strategy Call"
+  />
+
+  <GrowthFooter />
+</Layout>
+
+<style>
+  .stats-strip {
+    background: var(--charcoal-900);
+    padding: 48px 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0 24px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .stat:last-child { border-right: none; }
+
+  .stat-number {
+    font-size: 2.25rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* 3 Pillars */
+  .pillars-section { background: var(--white); }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: start;
+  }
+
+  .pillar-card {
+    padding: 28px 28px 0;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow: hidden;
+    transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
+  }
+
+  .pillar-card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--teal-400);
+    transform: translateY(-3px);
+  }
+
+  .pillar-card--accent {
+    background: linear-gradient(160deg, #f0f7ff 0%, #f0fdf9 100%);
+    border-color: rgba(37,99,235,0.15);
+  }
+
+  .pillar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pillar-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(20,184,166,0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-600);
+    flex-shrink: 0;
+  }
+
+  .pillar-number {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.4;
+    line-height: 1;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.1875rem;
+    color: var(--charcoal-900);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .pillar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .pillar-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(20,184,166,0.1);
+    color: var(--teal-700, #0f766e);
+    border: 1px solid rgba(20,184,166,0.2);
+    line-height: 1.5;
+  }
+
+  .pillar-desc {
+    font-size: 0.9375rem;
+    color: var(--charcoal-600);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .pillar-footer {
+    border-top: 1px solid var(--gray-100);
+    padding: 20px 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+  }
+
+  .pillar-outcomes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .pillar-outcomes li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 0.875rem;
+    color: var(--charcoal-700);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .pillar-outcomes svg {
+    color: var(--teal-500);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .pillar-cta {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--blue-600);
+    text-decoration: none;
+  }
+
+  .pillar-cta:hover { text-decoration: underline; }
+
+  /* Community Card */
+  .community-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #1a3ccc 0%, #1565c8 40%, #0a7ea4 75%, #0d9488 100%);
+    border-radius: var(--radius-xl);
+    padding: 40px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .community-left {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .community-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .community-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .community-pillar {
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .cp-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(94,234,212,1);
+    margin-bottom: 8px;
+  }
+
+  .community-pillar p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* Growth Programs */
+  .programs-section { background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+
+  .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .program-card {
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+
+  .program-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal-300);
+  }
+
+  .program-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(20,184,166,0.08));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-600);
+    margin-bottom: 14px;
+  }
+
+  .program-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--charcoal-900);
+  }
+
+  .program-card p {
+    font-size: 0.875rem;
+    color: var(--charcoal-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Why Stramasa */
+  .authority-section { background: var(--white); }
+
+  .authority-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .authority-content h2 { margin-bottom: 16px; }
+
+  .authority-content > p {
+    color: var(--charcoal-600);
+    font-size: 1.0625rem;
+    margin-bottom: 28px;
+    line-height: 1.7;
+  }
+
+  .authority-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .authority-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--charcoal-700);
+    font-weight: 500;
+  }
+
+  .authority-list svg {
+    color: var(--teal-500);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .authority-visual img {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Supporting Expertise */
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .expertise-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    color: inherit;
+  }
+
+  .expertise-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal-400);
+    text-decoration: none;
+  }
+
+  .expertise-card > svg {
+    color: var(--blue-600);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .expertise-card > div { flex: 1; }
+
+  .expertise-card h4 {
+    font-size: 1rem;
+    color: var(--charcoal-900);
+    margin: 0 0 6px;
+  }
+
+  .expertise-card p {
+    font-size: 0.875rem;
+    color: var(--charcoal-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .expertise-arrow {
+    font-size: 1.125rem;
+    color: var(--blue-600);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /* Trust & Awards */
+  .awards-section {
+    background: var(--charcoal-900);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .awards-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(20,184,166,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .awards-trust-row {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .awards-eyebrow {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--teal-400);
+    margin-bottom: 12px;
+  }
+
+  .awards-headline {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    color: var(--white);
+    margin: 0 0 12px;
+    line-height: 1.2;
+  }
+
+  .awards-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.55);
+    margin: 0;
+  }
+
+  .awards-badges-row {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    align-items: flex-end;
+  }
+
+  .award-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    position: relative;
+  }
+
+  .award-seal {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      #1e6b5e 0deg,
+      #14b8a6 60deg,
+      #2563eb 140deg,
+      #1d4ed8 200deg,
+      #0d9488 260deg,
+      #1e6b5e 360deg
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 0 3px rgba(20,184,166,0.3), 0 8px 32px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .award-badge--featured .award-seal {
+    width: 190px;
+    height: 190px;
+    background: conic-gradient(
+      from 0deg,
+      #1565c8 0deg,
+      #2563eb 60deg,
+      #0d9488 130deg,
+      #14b8a6 200deg,
+      #1565c8 280deg,
+      #1565c8 360deg
+    );
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.5), 0 12px 40px rgba(0,0,0,0.5), 0 0 60px rgba(20,184,166,0.2);
+  }
+
+  .award-seal:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 0 3px rgba(20,184,166,0.45), 0 16px 48px rgba(0,0,0,0.5);
+  }
+
+  .award-rays {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+      rgba(255,255,255,0.06) 0deg 9deg,
+      transparent 9deg 18deg
+    );
+    pointer-events: none;
+  }
+
+  .award-seal-inner {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 50%;
+    background: rgba(10, 20, 60, 0.75);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .award-star {
+    color: #5eead4;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+  }
+
+  .award-badge--featured .award-star {
+    width: 20px;
+    height: 20px;
+    color: #93c5fd;
+  }
+
+  .award-org {
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .award-year-num {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .award-badge--featured .award-year-num {
+    font-size: 2.75rem;
+  }
+
+  .award-type {
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+  }
+
+  .award-stars-row {
+    font-size: 0.55rem;
+    color: #5eead4;
+    letter-spacing: 0.15em;
+    margin-top: 3px;
+  }
+
+  .award-ribbon {
+    background: linear-gradient(135deg, #1565c8, #0d9488);
+    color: var(--white);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 20px;
+    border-radius: 0 0 8px 8px;
+    margin-top: -2px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    white-space: nowrap;
+  }
+
+  .award-badge--featured .award-ribbon {
+    padding: 8px 28px;
+    font-size: 0.75rem;
+    background: linear-gradient(135deg, #2563eb, #0d9488);
+  }
+
+  @media (max-width: 1100px) {
+    .programs-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 24px; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .programs-grid { grid-template-columns: repeat(2, 1fr); }
+    .community-card { grid-template-columns: 1fr; gap: 32px; padding: 32px 28px; }
+    .community-pillars { grid-template-columns: 1fr; gap: 16px; }
+    .authority-inner { grid-template-columns: 1fr; gap: 40px; }
+    .authority-visual { order: -1; }
+    .expertise-grid { grid-template-columns: 1fr; }
+    .case-grid { grid-template-columns: repeat(2, 1fr); }
+    .awards-badges-row { gap: 28px; }
+    .award-seal { width: 130px; height: 130px; }
+    .award-badge--featured .award-seal { width: 155px; height: 155px; }
+    .award-year-num { font-size: 1.875rem; }
+    .award-badge--featured .award-year-num { font-size: 2.25rem; }
+  }
+
+  @media (max-width: 580px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .programs-grid { grid-template-columns: repeat(2, 1fr); }
+    .case-grid { grid-template-columns: 1fr; }
+    .awards-badges-row { gap: 16px; }
+    .award-seal { width: 110px; height: 110px; }
+    .award-badge--featured .award-seal { width: 128px; height: 128px; }
+    .award-year-num { font-size: 1.5rem; }
+    .award-badge--featured .award-year-num { font-size: 1.875rem; }
+    .award-ribbon { padding: 5px 14px; font-size: 0.5625rem; }
+  }
+</style>

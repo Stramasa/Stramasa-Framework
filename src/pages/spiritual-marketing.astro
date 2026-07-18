@@ -1,0 +1,314 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GrowthHeader from '../components/GrowthHeader.astro';
+import GrowthFooter from '../components/GrowthFooter.astro';
+import Hero from '../components/Hero.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import CTASection from '../components/CTASection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+
+const services = [
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>',
+    title: 'SEO Authority Building',
+    description: 'Build a comprehensive topical authority footprint that positions your spiritual brand as the definitive expert Google and AI engines reference.',
+    href: '/spiritual-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+    title: 'Content Strategy',
+    description: 'Expertly crafted content clusters that address your audience\'s deepest questions and establish unmatched topical coverage in your niche.',
+    href: '/spiritual-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    title: 'Conversion Optimization',
+    description: 'Transform organic traffic into leads and clients with spiritual-audience-aware landing pages, funnels, and CTA strategies that convert.',
+    href: '/spiritual-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>',
+    title: 'Digital Advertising',
+    description: 'Targeted paid campaigns on Google, Meta, and YouTube, purpose-built for spiritual brand audiences with faith-sensitive messaging.',
+    href: '/spiritual-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    title: 'Social Media Strategy',
+    description: 'Build authentic community and amplify your spiritual message across Instagram, Facebook, YouTube, and emerging platforms.',
+    href: '/spiritual-marketing/',
+  },
+  {
+    icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+    title: 'Email & CRM Marketing',
+    description: 'Nurture relationships with your spiritual audience through personalized email sequences, newsletters, and CRM workflows built for your community.',
+    href: '/spiritual-marketing/',
+  },
+];
+
+const faqs = [
+  {
+    question: 'What is spiritual marketing?',
+    answer: 'Spiritual marketing refers to the set of digital marketing, SEO, brand positioning, and content strategies specifically tailored for spiritual brands, wellness organizations, faith-based businesses, churches, and similar organizations. It accounts for the unique expectations of spiritually-minded audiences and the trust-based nature of these industries.',
+  },
+  {
+    question: 'Why do spiritual brands need specialized marketing?',
+    answer: 'Spiritual audiences have unique expectations around authenticity, authority, and values alignment. Generic marketing tactics can feel out of place or even counterproductive. Specialized spiritual marketing respects the nuances of these communities while still driving measurable business results.',
+  },
+  {
+    question: 'How does Stramasa approach spiritual marketing differently?',
+    answer: 'Stramasa works exclusively in the spiritual space — meaning we deeply understand what moves spiritual audiences and what repels them. Our Growth Programs are not generic agency services repackaged for spiritual brands. They are purpose-built programs combining SEO, content strategy, community growth, digital campaigns, and conversion — each designed with the unique dynamics of spiritual businesses in mind.',
+  },
+  {
+    question: 'What results can spiritual businesses expect from Stramasa\'s Growth Programs?',
+    answer: 'Results vary by starting point, niche, and program, but our clients typically see 2-4x increases in organic search traffic within 6-12 months, stronger brand authority, higher-quality inquiries, and more consistent bookings, retreat registrations, or course sales. We focus on sustainable, compounding growth rather than short-term spikes.',
+  },
+  {
+    question: 'Does Stramasa work with churches and nonprofits?',
+    answer: 'Yes. We work with a full range of spiritual and faith-based organizations including churches, ministries, nonprofits, retreat centers, meditation studios, spiritual coaches, yoga businesses, and wellness brands. Each engagement is tailored to the specific context and goals of the organization.',
+  },
+];
+---
+
+<Layout
+  title="Spiritual Marketing Agency | Growth Programs for Practitioners, Retreats & Brands | Stramasa"
+  description="Stramasa is a specialized spiritual marketing agency offering proven growth programs for spiritual coaches, healers, retreat organizers, course creators, and purpose-driven brands. SEO, content, digital campaigns, and community growth."
+  canonical="/spiritual-marketing/"
+  category="Spiritual Marketing"
+  publishDate="2025-01-15"
+>
+  <SchemaMarkup
+    type="Service"
+    name="Spiritual Marketing Services"
+    description="Expert digital marketing, SEO, and brand strategy for spiritual brands, churches, and wellness organizations."
+    url="https://spiritual.stramasa.com/spiritual-marketing/"
+    serviceType="Digital Marketing"
+  />
+
+  <GrowthHeader />
+
+  <div class="container">
+    <Breadcrumbs crumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Spiritual Marketing' },
+    ]} />
+  </div>
+
+  <Hero
+    badge="Spiritual Marketing Agency"
+    headline='Specialized Marketing for <span class="text-gradient">Spiritual Entrepreneurs & Brands</span>'
+    subheadline="Stramasa's Growth Programs are built for spiritual coaches, healers, retreat organizers, course creators, and purpose-driven brands — delivering the SEO, content, community growth, and digital marketing expertise your business needs."
+    ctaLabel="Get Your Spiritual Marketing Strategy"
+    ctaHref="/contact/"
+    ctaSecondaryLabel="View Case Studies"
+    ctaSecondaryHref="/case-studies/"
+  />
+
+  <!-- Who This Is For -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="max-width:680px;margin:0 auto 48px;">
+        <span class="section-label">Spiritual Marketing Growth Programs</span>
+        <h2>Marketing Built for How Spiritual Businesses Actually Grow</h2>
+        <p style="color:var(--charcoal-600);font-size:1.0625rem;line-height:1.75;">Spiritual audiences are discerning. They value authenticity above all else, research deeply before committing, and choose based on trust and values alignment — not clever ad copy. Stramasa's Growth Programs are built with these dynamics at the core.</p>
+      </div>
+      <div class="client-types-grid">
+        <div class="client-type">
+          <div class="ct-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Practitioners & Personal Brands</h3>
+          <p>Spiritual coaches, healers, guides, teachers, breathwork and Reiki practitioners, readers, mentors, and facilitators building their visibility and client base.</p>
+        </div>
+        <div class="client-type">
+          <div class="ct-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Retreats, Events & Communities</h3>
+          <p>Retreat organizers, workshop facilitators, meditation experiences, group programs, online events, memberships, and spiritual communities that need consistent visibility.</p>
+        </div>
+        <div class="client-type">
+          <div class="ct-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Courses, Programs & Products</h3>
+          <p>Course creators, authors, educators, digital program creators, and product-based spiritual brands turning knowledge into scalable income streams.</p>
+        </div>
+        <div class="client-type">
+          <div class="ct-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Churches, Wellness & Nonprofits</h3>
+          <p>Churches, yoga studios, meditation centers, wellness brands, and faith-based nonprofits seeking specialized digital marketing beyond generic agency work.</p>
+        </div>
+      </div>
+      <div class="intro-links" style="margin-top:36px;">
+        <a href="/spiritual-branding/" class="inline-link">Spiritual Branding &rarr;</a>
+        <a href="/wellness-marketing/" class="inline-link">Wellness Marketing &rarr;</a>
+        <a href="/church-marketing/" class="inline-link">Church Marketing &rarr;</a>
+        <a href="/meditation-center-marketing/" class="inline-link">Meditation Marketing &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <ServiceSection
+    badge="Growth Programs"
+    headline="Stramasa's Spiritual Marketing Growth Programs"
+    subheadline="Stramasa's Growth Programs combine specialized expertise, proven strategies, and digital execution designed for spiritual businesses — not adapted from generic marketing playbooks."
+    services={services}
+    columns={3}
+  />
+
+  <!-- Process Section -->
+  <section class="section process-section">
+    <div class="container">
+      <div class="text-center" style="max-width:640px;margin:0 auto 56px;">
+        <span class="section-label">Our Process</span>
+        <h2>How Stramasa's Growth Programs Work</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-number">01</span>
+          <h3>Discovery & Audit</h3>
+          <p>We analyze your current digital footprint, competitive landscape, and audience insights to identify your highest-impact growth opportunities.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">02</span>
+          <h3>Strategy Design</h3>
+          <p>We build a custom growth strategy aligned with your brand values, audience expectations, and business objectives — no generic templates.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">03</span>
+          <h3>Content & SEO Execution</h3>
+          <p>Our team creates authoritative content, implements technical SEO, and builds the topical cluster that earns long-term search dominance.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">04</span>
+          <h3>Optimize & Scale</h3>
+          <p>We continuously analyze performance data, refine what works, and scale winning channels to compound your growth over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FAQSection
+    headline="Spiritual Marketing FAQs"
+    faqs={faqs}
+  />
+
+  <CTASection
+    headline="Start Growing Your Spiritual Business Today"
+    subheadline="Book a free strategy call with Stramasa's spiritual marketing team. We'll listen to where you are, identify your highest-impact opportunities, and map out the right growth program for your business."
+  />
+
+  <GrowthFooter />
+</Layout>
+
+<style>
+  .client-types-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .client-type {
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+  }
+
+  .ct-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(20,184,166,0.08));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-600);
+    margin-bottom: 14px;
+  }
+
+  .client-type h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--charcoal-900);
+  }
+
+  .client-type p {
+    font-size: 0.875rem;
+    color: var(--charcoal-600);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .intro-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .inline-link {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--blue-600);
+    text-decoration: none;
+  }
+
+  .inline-link:hover { text-decoration: underline; }
+
+  .process-section { background: var(--gray-50); }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  .process-step {
+    position: relative;
+    padding-top: 16px;
+  }
+
+  .step-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+
+  .process-step h3 { margin-bottom: 10px; font-size: 1.125rem; }
+
+  .process-step p {
+    font-size: 0.9375rem;
+    color: var(--charcoal-600);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 900px) {
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    .intro-visual { order: -1; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 1100px) {
+    .client-types-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 580px) {
+    .client-types-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+  }
+</style>

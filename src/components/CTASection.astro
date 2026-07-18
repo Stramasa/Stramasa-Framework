@@ -1,0 +1,87 @@
+---
+export interface Props {
+  headline?: string;
+  subheadline?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  variant?: 'gradient' | 'light';
+}
+
+const {
+  headline = 'Ready to Grow Your Spiritual Brand?',
+  subheadline = 'Partner with Stramasa and build lasting search authority in your industry. Get a tailored growth strategy from our specialists.',
+  ctaLabel = 'Book Your Free Strategy Call',
+  ctaHref = '/contact/',
+  variant = 'gradient',
+} = Astro.props;
+---
+
+<section class={`cta-section cta-${variant}`}>
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2>{headline}</h2>
+      <p>{subheadline}</p>
+    </div>
+    <a href={ctaHref} class={variant === 'gradient' ? 'btn btn-white' : 'btn btn-primary'}>
+      {ctaLabel}
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<style>
+  .cta-section { padding: 80px 0; }
+
+  .cta-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .cta-light {
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .cta-inner {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    justify-content: space-between;
+  }
+
+  .cta-text { flex: 1; }
+
+  .cta-gradient .cta-text h2 {
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .cta-gradient .cta-text p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.0625rem;
+    margin: 0;
+  }
+
+  .cta-light .cta-text h2 {
+    color: var(--charcoal-900);
+    margin-bottom: 12px;
+  }
+
+  .cta-light .cta-text p {
+    color: var(--charcoal-700);
+    font-size: 1.0625rem;
+    margin: 0;
+  }
+
+  .cta-section .btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .cta-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
